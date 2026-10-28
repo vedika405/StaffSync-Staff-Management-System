@@ -1,5 +1,5 @@
 import { useState } from "react"
-import axios from "axios"
+import api from "../api"
 import { useAuth } from "../context/AuthContext"
 import { useNavigate } from "react-router-dom"
 
@@ -16,7 +16,7 @@ export const Login = () => {
     e.preventDefault()
     setIsLoading(true)
     try {
-      const response = await axios.post("https://staffsync-backend-f6fc.onrender.com/api/auth/login", { email, password })
+      const response = await api.post("/auth/login", { email, password })
       if (response.data.success) {
         login(response.data.user)
         localStorage.setItem("token", response.data.token)

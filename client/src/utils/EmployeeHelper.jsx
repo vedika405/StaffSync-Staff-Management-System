@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://staffsync-backend-f6fc.onrender.com/api";
 
 // Common headers for API requests
 const getHeaders = () => ({

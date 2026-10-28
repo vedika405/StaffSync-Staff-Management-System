@@ -13,7 +13,7 @@ const List = () => {
     const fetchEmployes = async () => {
       try {
         setEmpLoading(true);
-        const response = await axios.get('http://localhost:5000/api/employee', {
+        const response = await axios.get('https://staffsync-backend-f6fc.onrender.com/api/employee', {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
           }

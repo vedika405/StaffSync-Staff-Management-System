@@ -23,7 +23,7 @@ const Add = () => {
         console.error("No token found");
         return;
       }
-      const response = await axios.post(`http://localhost:5000/api/leave/add`,leave,{
+      const response = await axios.post(`https://staffsync-backend-f6fc.onrender.com/api/leave/add`,leave,{
         headers: {
           "Authorization" : `Bearer ${token}`
         }
